@@ -1,0 +1,525 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+    color: #fff;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Info Boxes */
+.info-boxes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.info-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p {
+    color: #333;
+    margin: 0;
+}
+
+/* Coin Markets Section */
+.coin-markets {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.coin-markets .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.coin-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Coin Card Styles */
+.coin-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Set default text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.coin-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.coin-card img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.coin-card .coin-details {
+    margin-top: 10px;
+}
+
+.coin-card .coin-details h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.coin-card .coin-details p {
+    color: #999;
+    margin: 10px 0;
+}
+
+.coin-card .coin-details h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.coin-card .coin-details p:last-child {
+    font-size: 14px;
+    color: #4caf50;
+}
+
+.coin-markets .coin-card:nth-child(2) {
+    transform: translate(20px, -20px);
+}
+
+/* Text Content in Coin Markets */
+.coin-markets .text-content {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.coin-markets h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.coin-markets p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.coin-markets .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.coin-markets .btn:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .info-boxes {
+        flex-direction: column;
+    }
+
+    .info-box {
+        margin: 10px 0;
+    }
+
+    .coin-markets .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coin-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .coin-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .coin-markets .text-content {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* Leader Section Styles */
+.leader {
+    padding: 60px 0;
+    background-color: #fefaf5; /* Color de fondo similar al de la imagen */
+    position: relative;
+}
+
+.leader .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Para asegurar que el contenido esté por encima de los iconos flotantes */
+}
+
+.leader-left h2 {
+    font-size: 54px;
+    color: #203040;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.leader-left p {
+    font-size: 18px;
+    color: #626262;
+    margin-bottom: 15px;
+}
+
+.leader-right img {
+    max-width: 80%;
+    height: auto;
+    transform: rotate(-5deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .leader .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leader-left h2 {
+        font-size: 36px;
+    }
+
+    .leader-right img {
+        margin-top: 20px;
+        transform: rotate(0deg);
+    }
+
+    .icon-1,
+    .icon-2,
+    .icon-3 {
+        display: none;
+    }
+}
+
+/* Adiciones de Estilo */
+.leader-left p::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #cf1616; /* Color del círculo al inicio del texto */
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.leader .container::before,
+.leader .container::after {
+    display: none; /* Oculta los pseudo-elementos antes y después */
+}
+/* Estilo específico para el h2 */
+.exchange h2 {
+    text-align: center; /* Centra el texto del h2 */
+    margin: 0 auto; /* Asegura que el margen sea automático */
+    width: fit-content; /* Ajusta el ancho del h2 al contenido */
+    font-size: 2rem; /* Tamaño del texto del título */
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sección de Exchange */
+.exchange {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para el título */
+.exchange h2 {
+    text-align: center; /* Centra el texto del h2 */
+    margin: 0 auto; /* Asegura que el margen sea automático */
+    width: fit-content; /* Ajusta el ancho del h2 al contenido */
+    font-size: 2rem; /* Tamaño del texto del título */
+}
+
+/* Estilos para las tarjetas */
+.exchange-cards {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: nowrap; /* Mantiene las tarjetas en una sola fila */
+}
+
+.exchange-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px; /* Ancho máximo de las tarjetas */
+    flex: 1 1 auto; /* Permite que las tarjetas se ajusten proporcionalmente */
+}
+
+.exchange-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.exchange-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.exchange-card p {
+    font-size: 1rem;
+    color: #666;
+}
+.mobile-app {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    justify-content: space-between; /* Separar el contenido horizontalmente */
+    max-width: 1200px; /* Asegura que el contenido no se extienda demasiado en pantallas grandes */
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1; /* Permite que el contenido ocupe todo el espacio disponible a la izquierda */
+}
+
+.crypto-image {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen para que no sea demasiado grande */
+    margin-left: 20px; /* Añade un poco de espacio a la izquierda de la imagen */
+}
+
+h2 {
+    font-size: 52px;
+    margin: 0;
+}
+
+.app-store-buttons {
+    margin-top: 20px;
+}
+
+.app-store-button img {
+    width: 150px;
+    margin: 0 10px;
+}
+
+.footer-1, .footer-2 {
+    padding: 20px 50px;
+}
+
+/* Estilos del primer footer */
+.footer-1 {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-1 a {
+    font-size: 15px; 
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer-1 .footer-left {
+    display: flex;
+    align-items: center;
+}
+.footer-1 .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.footer-1 .footer-left nav a {
+    margin-right: 20px;
+}
+
+/* Estilos del segundo footer */
+.footer-2 {
+    background-color: #E7F0E1;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-2 .footer-left {
+    max-width: 70%;
+}
+
+.footer-2 .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-2 .footer-right a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 0; /* Elimina el padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Elimina el borde y el borde redondeado */
+    border: none;
+    border-radius: 0;
+}
+
+.footer-2 .footer-right a img {
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: 90px;
+}
+
+.footer-2 .footer-right a:hover {
+    background-color: #333333;
+    color: white;
+}
