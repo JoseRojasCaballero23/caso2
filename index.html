@@ -32,7 +32,8 @@
             <div class="hero-image">
                 <img src="img/chicocelular.png" alt="Hero Image">
             </div>
-            <div class="info-container"> <div class="info-boxes">
+            <div class="info-container"> 
+                <div class="info-boxes">
                     <div class="info-box">
                         <p>Unmatched security</p>
                     </div>
@@ -128,27 +129,28 @@
     </section>
     <section style="background-color: #f3f4f6; padding: 60px 0;">
         <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-          <h2 style="color: #2d3748; font-size: 2.5em; margin-bottom: 20px;">An Innovative Environment for</h2>
-          <p style="color: #718096; font-size: 1.100em; margin-bottom: 30px;">
-            Bitcoin is storming the Bastille, and we’re up front. Bittrex Global’s premier<br>
-            trading platform is designed for those who grasp the power of blockchain’s<br>
-            promise, and want to be a part of the movement.
-        </p>
-        
-          <div style="display: flex; justify-content: center; gap: 20px;">
-            <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; max-width: 450px; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-              <img src="img/chico.png" alt="Create Your Account" style="width: 60%; height: auto; border-radius: 10px;">
-              <h3 style="color: #2d3748; font-size: 1.5em; margin-top: 20px;">Create Your Account to Get Started.</h3>
-              <a href="#" style="color: #0dff21; font-size: 1.125em;">Join Today →</a>
+            <h2 style="color: #2d3748; font-size: 2.5em; margin-bottom: 20px;">An Innovative Environment for</h2>
+            <p style="color: #718096; font-size: 1.100em; margin-bottom: 30px;">
+                Bitcoin is storming the Bastille, and we’re up front. Bittrex Global’s premier<br>
+                trading platform is designed for those who grasp the power of blockchain’s<br>
+                promise, and want to be a part of the movement.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; max-width: 450px; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="img/chico.png" alt="Create Your Account" style="width: 60%; height: auto; border-radius: 10px;">
+                    <h3 style="color: #2d3748; font-size: 1.5em; margin-top: 20px;">Create Your Account to Get Started.</h3>
+                    <a href="#" style="color: #0dff21; font-size: 1.125em;">Join Today →</a>
+                </div>
+                <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; max-width: 450px; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="img/chica.png" alt="Submit Your Token" style="width: 50%; height: auto; border-radius: 10px;">
+                    <h3 style="color: #2d3748; font-size: 1.5em; margin-top: 20px;">Submit Your Token for Listing.</h3>
+                    <a href="#" style="color: #0dff21; font-size: 1.125em;">Join Today →</a>
+                </div>
             </div>
-            <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; max-width: 450px; text-align: left; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-              <img src="img/chica.png" alt="Submit Your Token" style="width: 50%; height: auto; border-radius: 10px;">
-              <h3 style="color: #2d3748; font-size: 1.5em; margin-top: 20px;">Submit Your Token for Listing.</h3>
-              <a href="#" style="color: #0dff21; font-size: 1.125em;">Join Today →</a>
-            </div>
-      </section>
+        </div>
+    </section>
     
-      <footer class="footer-1">
+    <footer class="footer-1">
         <div class="footer-left">
             <div class="logo">ofsp_ce</div>
             <nav>
@@ -179,5 +181,14 @@
             <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Evita la acción predeterminada del enlace
+                alert('Página en desarrollo'); // Muestra la alerta
+            });
+        });
+    </script>
 </body>
 </html>
