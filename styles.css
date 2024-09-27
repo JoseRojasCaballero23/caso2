@@ -7,15 +7,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #222;
+    background-color: #E9F2E5;
     padding: 20px 0;
-    color: #fff;
+    color: #cfebf7;
     width: 100%;
 }
 
@@ -33,7 +32,7 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: #021753;
 }
 
 nav ul {
@@ -46,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #021753;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -61,71 +60,54 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    padding: 50px;
+    background-color: #E9F2E5;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .hero-content {
-    max-width: 600px;
+    flex: 1;
+    max-width: 60%;
+    text-align: left;
 }
 
-.hero-content h1 {
-    font-size: 48px;
+#title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0b2a32;
     margin-bottom: 20px;
-    color: #333;
+}
+
+#title img {
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #2d3748;
     margin-bottom: 20px;
-    color: #666;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f39c12;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #e67e22;
+.hero-image {
+    flex: 1;
+    max-width: 60%;
+    text-align: right;
 }
 
 .hero-image img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-}
-
-/* Info Boxes */
-.info-boxes {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    justify-content: space-between;
-}
-
-.info-box {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.info-box p {
-    color: #333;
-    margin: 0;
+    object-fit: contain;
 }
 
 /* Coin Markets Section */
 .coin-markets {
-    background-color: #f9f9f9;
+    background-color: #F7F4EF;
     padding: 50px 0;
 }
 
@@ -150,14 +132,14 @@ nav ul li a:hover {
     width: 200px;
     text-align: center;
     position: relative;
-    text-decoration: none; /* Remove underline */
-    color: #333; /* Set default text color */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .coin-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .coin-card img {
@@ -230,60 +212,10 @@ nav ul li a:hover {
     background-color: #e67e22;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-    }
-
-    .hero-image {
-        margin-top: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .info-boxes {
-        flex-direction: column;
-    }
-
-    .info-box {
-        margin: 10px 0;
-    }
-
-    .coin-markets .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .coin-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .coin-card {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .coin-markets .text-content {
-        text-align: center;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-}
-
 /* Leader Section Styles */
 .leader {
     padding: 60px 0;
-    background-color: #fefaf5; /* Color de fondo similar al de la imagen */
+    background-color: #fefaf5;
     position: relative;
 }
 
@@ -292,7 +224,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 1; /* Para asegurar que el contenido esté por encima de los iconos flotantes */
+    z-index: 1;
 }
 
 .leader-left h2 {
@@ -314,35 +246,13 @@ nav ul li a:hover {
     transform: rotate(-5deg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-/* Responsive */
-@media (max-width: 768px) {
-    .leader .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .leader-left h2 {
-        font-size: 36px;
-    }
-
-    .leader-right img {
-        margin-top: 20px;
-        transform: rotate(0deg);
-    }
-
-    .icon-1,
-    .icon-2,
-    .icon-3 {
-        display: none;
-    }
-}
 
 /* Adiciones de Estilo */
 .leader-left p::before {
     content: '';
     width: 15px;
     height: 15px;
-    background-color: #cf1616; /* Color del círculo al inicio del texto */
+    background-color: #cf1616;
     display: inline-block;
     border-radius: 50%;
     margin-right: 10px;
@@ -351,15 +261,17 @@ nav ul li a:hover {
 
 .leader .container::before,
 .leader .container::after {
-    display: none; /* Oculta los pseudo-elementos antes y después */
+    display: none;
 }
+
 /* Estilo específico para el h2 */
 .exchange h2 {
-    text-align: center; /* Centra el texto del h2 */
-    margin: 0 auto; /* Asegura que el margen sea automático */
-    width: fit-content; /* Ajusta el ancho del h2 al contenido */
-    font-size: 2rem; /* Tamaño del texto del título */
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 2rem;
 }
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -368,74 +280,67 @@ body {
     box-sizing: border-box;
 }
 
-/* Sección de Exchange */
-.exchange {
-    padding: 50px 0;
-    background-color: #f4f4f4;
-}
-
-/* Estilo para el título */
-.exchange h2 {
-    text-align: center; /* Centra el texto del h2 */
-    margin: 0 auto; /* Asegura que el margen sea automático */
-    width: fit-content; /* Ajusta el ancho del h2 al contenido */
-    font-size: 2rem; /* Tamaño del texto del título */
-}
-
-/* Estilos para las tarjetas */
-.exchange-cards {
-    display: flex;
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 20px; /* Espacio entre las tarjetas */
-    flex-wrap: nowrap; /* Mantiene las tarjetas en una sola fila */
-}
-
-.exchange-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Features Section */
+.features {
+    padding: 40px;
+    background-color: #f9f8fa;
     text-align: center;
-    max-width: 300px; /* Ancho máximo de las tarjetas */
-    flex: 1 1 auto; /* Permite que las tarjetas se ajusten proporcionalmente */
 }
 
-.exchange-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 60px;
+    color: #333;
 }
 
-.exchange-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
 }
 
-.exchange-card p {
-    font-size: 1rem;
+.feature-tile {
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    text-align: left;
+}
+
+.feature-icon-small {
+    width: 90px;
+    height: 80px;
+    margin-right: 10px; 
+}
+
+.feature-tile p {
+    font-size: 0.9em;
     color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
 }
+
+/* Mobile App */
 .mobile-app {
     padding: 40px 20px;
-    background-color: #f8f8f8;
+    background-color: #effcf7;
 }
 
 .container {
     display: flex;
-    align-items: center; /* Centrar verticalmente el contenido */
-    justify-content: space-between; /* Separar el contenido horizontalmente */
-    max-width: 1200px; /* Asegura que el contenido no se extienda demasiado en pantallas grandes */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .content {
-    flex: 1; /* Permite que el contenido ocupe todo el espacio disponible a la izquierda */
+    flex: 1;
 }
 
 .crypto-image {
-    flex-shrink: 0; /* Evita que la imagen se reduzca */
-    max-width: 400px; /* Ajusta el tamaño máximo de la imagen para que no sea demasiado grande */
-    margin-left: 20px; /* Añade un poco de espacio a la izquierda de la imagen */
+    flex-shrink: 0;
+    max-width: 400px;
+    margin-left: 20px;
 }
 
 h2 {
@@ -458,27 +363,32 @@ h2 {
 
 /* Estilos del primer footer */
 .footer-1 {
-    background-color: #000000;
+    background-color: #4eb16f;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .footer-1 a {
     font-size: 15px; 
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 10px;
 }
+
 .footer-1 .footer-left {
     display: flex;
     align-items: center;
 }
+
 .footer-1 .logo {
+    color: #ffffff;
     font-size: 24px;
     font-weight: bold;
     margin-right: 20px;
 }
+
 .footer-1 .footer-left nav a {
     margin-right: 20px;
 }
@@ -505,21 +415,79 @@ h2 {
     color: #333333;
     text-decoration: none;
     margin-left: 20px;
-    padding: 0; /* Elimina el padding */
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Elimina el borde y el borde redondeado */
     border: none;
     border-radius: 0;
 }
 
 .footer-2 .footer-right a img {
-    width: 90px; /* Ajusta el tamaño según sea necesario */
+    width: 90px;
     height: 90px;
 }
 
 .footer-2 .footer-right a:hover {
     background-color: #333333;
     color: white;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+    }
+    
+    .hero {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        padding: 30px; /* Ajusta el padding */
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%; /* Asegura que el contenido y la imagen ocupen el 100% */
+        text-align: center; /* Centra el texto */
+    }
+
+    .coin-cards {
+        flex-direction: column; /* Cambia a columna para las tarjetas de monedas */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .coin-card {
+        width: 100%; /* Asegura que las tarjetas ocupen el 100% del ancho */
+        max-width: 300px; /* Limita el ancho máximo */
+        margin-bottom: 20px; /* Añade espacio entre tarjetas */
+    }
+
+    .features-grid {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los tiles */
+    }
+
+    .feature-tile {
+        width: 100%; /* Asegura que el tile ocupe el 100% del ancho */
+        max-width: 250px; /* Limita el ancho máximo */
+        margin-bottom: 20px; /* Añade espacio entre tiles */
+    }
+
+    .crypto-image {
+        margin-left: 0; /* Elimina margen en pantallas pequeñas */
+        margin-top: 20px; /* Añade margen superior */
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho */
+    }
+
+    .footer-1, .footer-2 {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .footer-1 .footer-left,
+    .footer-2 .footer-left,
+    .footer-2 .footer-right {
+        max-width: 100%; /* Asegura que los elementos ocupen el 100% */
+        text-align: center; /* Centra el texto */
+        margin-bottom: 10px; /* Añade espacio entre secciones */
+    }
 }
