@@ -1,527 +1,253 @@
-* {
+/* Fondo del cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #E9F2E5; /* Color de fondo de la página */
-    height: auto; /* Asegura que el body tenga altura automática */
-    overflow: auto; /* Permitir desplazamiento */
-}
-
-header {
-    background-color: transparent; /* Sin fondo para el header */
-}
-
-.barranavegacion {
-    max-width: 1200px; /* Limita el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.logo img {
-    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #021753; /* Color del texto de los enlaces */
-    text-decoration: none;
-    padding: 8px 12px;
-    font-weight: bold; /* Hacer el texto más grueso */
-    transition: color 0.3s; /* Transición suave para el color */
-}
-
-.nav-links a:hover {
-    color: #fff; /* Color del texto al pasar el mouse */
-}
-
-/* Estilos para la sección hero */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 50px auto; /* Espaciado superior e inferior */
-    padding: 20px;
-}
-
-.hero-content {
-    max-width: 50%; /* Limita el ancho de la parte del contenido */
-}
-
-.hero h1 {
-    font-size: 4rem;
-    color: #021753; /* Color principal del título */
-    line-height: 1.2;
-    white-space: normal; /* Permite que el texto largo se ajuste */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #667085;
-    margin-top: 20px;
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-#title img {
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-/* Mantén el estilo del botón de imagen original */
-input[type="image"] {
-    margin-top: 30px;
-    width: 100px; /* Ajusta solo el tamaño */
-    height: 70px; /* Ajusta solo el tamaño */
-    cursor: pointer;
-}
-
-/* Estilo para la imagen del héroe */
-.hero-image {
-    max-width: 52%; /* Ajusta el tamaño del contenedor de la imagen */
-}
-
-.hero-image img {
-    width: 110%;
-    height: auto;
-}
-
-/* Coin Markets Section */
-.coin-markets {
-    background-color: #F7F4EF; /* Color de fondo de la sección */
-    padding: 20px; /* Espaciado interno */
-}
-
-.container {
-    max-width: 1200px; /* Limita el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    display: flex;
-    justify-content: space-between; /* Espacio entre las tarjetas y el texto */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos más pequeños */
-}
-
-.coin-cards {
-    display: flex;
-    flex-direction: row; /* Mantiene las tarjetas en una fila */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no hay espacio suficiente */
-    gap: 30px; /* Espacio entre las tarjetas */
-}
-
-.coin-card {
-    background-color: #fff; /* Fondo blanco para las tarjetas */
-    border: 1px solid #ccc; /* Borde de las tarjetas */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 40px; /* Espaciado interno aumentado */
-    flex: 1; /* Asegura que todos los cuadros tengan el mismo tamaño */
-    min-width: 250px; /* Establece un ancho mínimo */
-    min-height: 300px; /* Aumenta la altura mínima para hacer los cuadros más largos */
-    text-align: center; /* Centra el contenido */
-    text-decoration: none; /* Elimina el subrayado */
-    transition: transform 0.3s; /* Animación al pasar el ratón */
-}
-
-.coin-card:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
-}
-
-.coin-card img {
-    width: 100px; /* Tamaño de las imágenes */
-    height: auto;
-}
-
-.coin-details h3 {
-    font-size: 1.5rem; /* Tamaño de la moneda */
-    color: #021753; /* Color del texto */
-    margin-bottom: 15px; /* Espacio debajo del nombre */
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.coin-details h2 {
-    font-size: 2rem; /* Tamaño del precio */
-    color: #021753; /* Color azul oscuro para el precio */
-    margin-bottom: 15px; /* Espacio debajo del precio */
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.coin-details p {
-    margin-top: 10px; /* Espacio superior para el porcentaje */
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.coin-card .coin-details p:last-child {
-    font-size: 14px;
-    color: #4caf50; /* Color verde para el porcentaje */
-}
-
-.text-content {
-    max-width: 50%; /* Limita el ancho del contenido de texto */
-    margin-left: 20px; /* Espacio a la izquierda del texto */
-}
-
-.text-content h2 {
-    font-size: 2rem;
-    color: #021753;
-    margin-bottom: 10px; /* Espacio debajo del título */
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.text-content p {
-    margin-bottom: 10px; /* Espacio entre párrafos */
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.coin-markets p {
-    font-size: 18px;
-    color: #322f4b;
-    margin-bottom: 20px;
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-/* Sección Leader */
-.leader {
-    padding: 60px 0;
-    background-color: #fefaf5;
-    position: relative;
-}
-
-.leader-left h2 {
-    font-size: 68px;
-    color: #293d52;
-    margin-bottom: 25px;
-    line-height: 1.2;
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.leader-left p {
-    font-size: 30px;
-    color: #5c7467;
-    margin-bottom: 25px;
-    white-space: normal; /* Permite que el texto largo se ajuste */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras */
-}
-
-.leader .container {
-    display: flex;
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: flex-start; /* Alinea la parte superior */
-}
-
-.leader-left {
-    flex: 1; /* Ocupa el espacio disponible */
-}
-
-.leader-right {
-    flex: 0 0 auto; /* La imagen no debe estirarse */
-    margin-left: 20px; /* Espacio entre el texto y la imagen */
-}
-
-.leader-right img {
-    max-width: 80%; /* Se ajusta al contenedor */
-    height: auto; /* Mantiene la proporción */
-}
-
-/* Sección Features */
-.features {
-    padding: 40px;
-    background-color: #f9f8fa;
+    background: linear-gradient(to bottom, #d6e9ff, #ffffff);
     text-align: center;
 }
 
-.features h2 {
-    font-size: 2em;
-    margin-bottom: 60px;
-    color: #333;
-}
-
-.features-grid {
+/* Barra de navegación */
+.navbar {
     display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
+    justify-content: center;
+    padding: 15px 0;
 }
 
-.feature-tile {
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px;
-    text-align: left;
-}
-
-.feature-icon-small {
-    width: 90px;
-    height: 80px;
-    margin-right: 10px; 
-}
-
-.feature-tile p {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-
-/* Nueva sección de la aplicación móvil */
-.mobile-app {
-    padding: 40px 0;
+.navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
-.mobile-app .content {
-    flex: 1;
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.mobile-app .crypto-image {
-    flex-shrink: 0;
-    max-width: 400px;
-    margin-left: 20px;
+.logo img {
+    width: 24px;
+    height: 24px;
 }
 
-.mobile-app h2 {
-    font-size: 52px;
-    margin: 0;
+.logo span {
+    font-weight: bold;
+    color: #1f2937;
+    font-size: 18px;
 }
 
-.mobile-app .app-store-buttons {
+/* Menú */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Botones de la barra de navegación */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.sign-in {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+.join-today {
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Sección Principal */
+.hero {
     margin-top: 20px;
-    display: flex; /* Alinear horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    text-align: center;
 }
 
-.mobile-app .app-store-button {
-    margin-right: 10px; /* Espacio entre los botones */
+/* Etiqueta superior */
+.tagline {
+    display: inline-block;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-app .app-store-button img {
-    width: 150px; /* Tamaño fijo */
-    height: auto; /* Mantiene la proporción */
+/* Título principal */
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-top: 10px;
+    line-height: 1.1;
 }
 
-/* Estilos para el Footer 1 */
-footer {
-    background-color: #32a776; /* Color de fondo verde */
-    padding: 30px; /* Espaciado interno */
+.hero-title .line1, .hero-title .line2 {
+    display: block;
 }
 
-.footer-container {
-    display: flex; /* Usar flexbox para alinear los elementos */
-    align-items: center; /* Alinear verticalmente */
-    justify-content: space-between; /* Espacio entre logo, enlaces y texto */
-    max-width: 1200px; /* Limita el ancho del footer */
-    margin: 0 auto; /* Centra el contenedor */
+/* Descripción */
+.description {
+    font-size: 16px;
+    color: #5a6b85;
+    margin-top: 10px;
 }
 
-.footer-links-center {
-    display: flex; /* Usar flexbox para alinear los enlaces */
-    justify-content: center; /* Centra los enlaces */
-    flex: 1; /* Ocupa el espacio restante */
+/* Botones de acción */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.footer-links-center a,
-.footer-links-right a {
-    color: #ffffff; /* Color del texto blanco */
-    text-decoration: none; /* Eliminar subrayado */
-    margin: 0 10px; /* Espacio horizontal entre enlaces */
+button {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
 }
 
-.footer-links-right {
-    display: flex; /* Usar flexbox para alinear los enlaces a la derecha */
-    justify-content: flex-end; /* Alinear a la derecha */
+/* Botón Learn More */
+.learn-more {
+    background: white;
+    border: 2px solid #5a6b85;
+    color: #5a6b85;
 }
 
-.footer-logo img {
-    width: 140px; /* Cambia el tamaño según lo necesites */
-    height: auto; /* Mantiene la proporción */
+.learn-more:hover {
+    background: #5a6b85;
+    color: white;
 }
 
-/* Estilos para el Footer 2 */
-.footer2 {
-    background-color: #dae7da; /* Color de fondo */
-    color: #000000; /* Color del texto negro */
-    padding: 10px 20px; /* Espaciado interno */
+/* Botón Get Started */
+.get-started {
+    background: #3a7bfd;
+    color: white;
 }
 
-.footer2-container {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: center; /* Alinear verticalmente */
-    justify-content: space-between; /* Espacio entre los elementos */
-    max-width: 1200px; /* Limita el ancho del footer */
-    margin: 0 auto; /* Centra el contenedor */
+.get-started:hover {
+    background: #1a5ed8;
 }
 
-.footer2-info {
-    flex: 1; /* Ocupa el espacio disponible */
+/* ============================= */
+/* 📌 SECCIÓN DE COMUNIDAD Y ESTADÍSTICAS */
+/* ============================= */
+
+/* Sección de Comunidad */
+.community-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f0f4ff);
+    border-radius: 20px;
 }
 
-.footer2-social a img {
-    width: 70px; /* Ajusta el tamaño de los íconos */
-    margin-left: 10px; /* Espacio entre íconos */
+/* Contenedor de avatares */
+.avatars {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none; /* Oculta inicialmente */
-    }
-
-    .navbar:hover .nav-links {
-        display: flex; /* Muestra los enlaces al pasar el mouse */
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Espacio entre enlaces en móvil */
-    }
-
-    .hero {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra el contenido */
-    }
-
-    .hero-content {
-        max-width: 100%; /* Permite que el contenido ocupe todo el ancho */
-        text-align: center; /* Centra el texto */
-    }
-
-    .hero-image {
-        max-width: 100%; /* Asegura que la imagen ocupe todo el ancho en móviles */
-        margin-top: 20px; /* Espacio entre el contenido y la imagen en móviles */
-    }
-
-    .coin-markets .container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .text-content {
-        max-width: 100%; /* Permite que el contenido ocupe todo el ancho */
-        margin-left: 0; /* Elimina margen izquierdo */
-        text-align: center; /* Centra el texto en móvil */
-    }
-
-    .coin-cards {
-        justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
-    }
-
-    .coin-card {
-        margin-right: 0; /* Elimina margen derecho en móviles */
-        margin-bottom: 20px; /* Agrega margen inferior para separación */
-    }
-
-    .leader .container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .leader-left,
-    .leader-right {
-        margin-left: 0; /* Elimina margen izquierdo */
-        text-align: center; /* Centra el texto en móvil */
-        width: 100%; /* Asegura que ocupen el ancho completo */
-    }
-
-    .leader-left h2 {
-        font-size: 40px; /* Tamaño reducido para móviles */
-    }
-
-    .leader-left p {
-        font-size: 20px; /* Tamaño reducido para móviles */
-    }
-
-    .leader-right img {
-        max-width: 100%; /* Ajusta la imagen al contenedor en móviles */
-        height: auto; /* Mantiene la proporción */
-    }
-
-    /* Responsivo para la sección features */
-    .features-grid {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .feature-tile {
-        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
-        margin-bottom: 20px; /* Espacio inferior entre características */
-    }
-
-    /* Estilos específicos para la sección móvil */
-    .mobile-app .container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .mobile-app .crypto-image {
-        margin-left: 0; /* Elimina el margen en móviles */
-        max-width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-    }
-
-    .mobile-app h2 {
-        font-size: 36px; /* Tamaño reducido para móviles */
-        text-align: center; /* Centra el título */
-    }
-
-    .mobile-app .app-store-buttons {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los botones */
-    }
-
-    .mobile-app .app-store-button img {
-        width: 100px; /* Tamaño reducido en pantallas pequeñas */
-    }
-
-    /* Responsividad para los footers */
-    footer,
-    .footer2 {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .footer-container,
-    .footer2-container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .footer-links-center,
-    .footer-links-right {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los enlaces */
-    }
-
-    .footer-links-right {
-        justify-content: center; /* Centra los enlaces a la derecha */
-    }
+.avatars img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Título de la comunidad */
+.community-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+/* Subtítulo */
+.community-subtitle {
+    font-size: 18px;
+    color: #5a6b85;
+    margin-bottom: 20px;
+}
+
+/* Botón Explorar */
+.explore-button {
+    background: white;
+    color: black;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.explore-button:hover {
+    background: #f3f4f6;
+    border-color: #aaa;
+}
+
+/* Sección de Estadísticas */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
