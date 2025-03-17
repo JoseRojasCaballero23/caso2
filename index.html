@@ -1,34 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./chatbox.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./chatbox.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-  
-
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
-
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style>
       * {
         font-family: Poppins;
       }
-    </style>
 
+      /* Animaciones personalizadas */
+      @keyframes slideFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideFromRight {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideFromTop {
+        from {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideFromBottom {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Clases para las animaciones (más rápidas) */
+      .slide-left {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duración reducida a 0.8s */
+      }
+
+      .slide-right {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duración reducida a 0.8s */
+      }
+
+      .slide-top {
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duración reducida a 0.8s */
+      }
+
+      .slide-bottom {
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duración reducida a 0.8s */
+      }
+
+      /* Scroll suave */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Efectos para botones */
+      button {
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        transform: scale(1.1); /* Agrandar el botón al pasar el cursor */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      /* Efecto de hover para imágenes */
+      img:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+      }
+    </style>
     <title>Chatbox</title>
   </head>
   <body>
     <div class="p-10 bg-gradient-to-tr from-blue-700 to-blue-500">
       <div class="max-w-[1040px] mx-auto">
-   
         <header class="flex flex-wrap justify-between items-center gap-4">
-      
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 slide-left">
             <svg
               class="w-8 h-8 fill-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -41,33 +130,31 @@
             <h1 class="text-white text-xl font-semibold">Chatbox</h1>
           </div>
 
-          <div class="flex items-center gap-4">
-            <a href="#" class="text-white text-sm">Home</a>
-            <a href="#" class="text-white text-sm">Features</a>
-            <a href="#" class="text-white text-sm">About Us</a>
-            <a href="#" class="text-white text-sm">Download</a>
+          <div class="flex items-center gap-4 slide-right">
+            <a href="#" class="text-white text-sm">Inicio</a>
+            <a href="#" class="text-white text-sm">Características</a>
+            <a href="#" class="text-white text-sm">Sobre Nosotros</a>
+            <a href="#" class="text-white text-sm">Descargar</a>
           </div>
 
-      
           <button
-            class="bg-white text-blue-700 text-sm font-semibold px-8 py-4 rounded-full cursor-pointer"
+            class="bg-white text-blue-700 text-sm font-semibold px-8 py-4 rounded-full cursor-pointer slide-bottom"
           >
-            Try For Free
+            Probar Gratis
           </button>
         </header>
 
-   
         <div class="mt-10">
           <div class="flex flex-col md:flex-row items-center justify-between">
-            <h1 class="text-4xl md:text-6xl/17 text-white text-center md:text-left">
-              Get the best <b class="font-semibold">experience</b> when sending messages.
+            <h1 class="text-4xl md:text-6xl/17 text-white text-center md:text-left slide-left">
+              Obtén la mejor <b class="font-semibold">experiencia</b> al enviar mensajes.
             </h1>
             <div class="min-w-[35%] flex flex-col items-center md:items-end gap-4 mt-6 md:mt-0">
-              <h2 class="text-center md:text-right text-white text-xs/5">
-                Platform used to send messages with a myriad of features. by prioritizing the user experience.
+              <h2 class="text-center md:text-right text-white text-xs/5 slide-right">
+                Plataforma utilizada para enviar mensajes con una gran cantidad de características, priorizando la experiencia del usuario.
               </h2>
               <button
-                class="flex gap-1 w-fit items-center bg-white text-blue-700 text-sm font-semibold px-8 py-4 rounded-full cursor-pointer"
+                class="flex gap-1 w-fit items-center bg-white text-blue-700 text-sm font-semibold px-8 py-4 rounded-full cursor-pointer slide-bottom"
               >
                 <svg
                   class="w-5 h-5 fill-blue-700"
@@ -78,10 +165,10 @@
                     d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
                   />
                 </svg>
-                <span class="ml-2">Download Now</span>
+                <span class="ml-2">Descargar Ahora</span>
               </button>
               <button
-                class="flex gap-1 w-fit items-center text-white text-sm font-semibold border border-white px-8 py-4 rounded-full cursor-pointer"
+                class="flex gap-1 w-fit items-center text-white text-sm font-semibold border border-white px-8 py-4 rounded-full cursor-pointer slide-bottom"
               >
                 <svg
                   class="w-5 h-5 fill-white"
@@ -92,12 +179,12 @@
                     d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
                   />
                 </svg>
-                <span class="ml-2">Download Now</span>
+                <span class="ml-2">Descargar Ahora</span>
               </button>
             </div>
           </div>
 
-          <img class="mt-10 -mb-42 rounded-xl" src="./img/pantalla1.png" />
+          <img class="mt-10 -mb-42 rounded-xl slide-bottom" src="./img/pantalla1.png" />
         </div>
       </div>
     </div>
@@ -108,52 +195,50 @@
       class="mt-22 py-10 px-15 max-w-[1040px] mx-auto flex flex-wrap justify-center md:justify-between items-center gap-6"
     >
       <img
-        class="w-16 grayscale opacity-30 hover:opacity-100 cursor-pointer"
+        class="w-16 grayscale opacity-30 hover:opacity-100 cursor-pointer slide-left"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png"
         alt="stripe"
       />
       <img
-        class="w-28 grayscale opacity-25 hover:opacity-100 cursor-pointer"
+        class="w-28 grayscale opacity-25 hover:opacity-100 cursor-pointer slide-right"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSci11wBKbPUYyZQpcTIEntAK1QIQC5C3VChA&s"
         alt="afterpay"
       />
       <img
-        class="w-24 grayscale opacity-25 hover:opacity-100 cursor-pointer"
+        class="w-24 grayscale opacity-25 hover:opacity-100 cursor-pointer slide-left"
         src="https://upload.wikimedia.org/wikipedia/commons/2/24/Hopin_logo_%282024%29.png"
         alt="hopin"
       />
       <img
-        class="w-24 grayscale opacity-25 hover:opacity-100 cursor-pointer"
+        class="w-24 grayscale opacity-25 hover:opacity-100 cursor-pointer slide-right"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-PASpJ1kGJj0fkrSX9cbRmWely9ylCCjXQ&s"
         alt="splunk"
       />
       <img
-        class="w-26 grayscale opacity-25 hover:opacity-100 cursor-pointer"
+        class="w-26 grayscale opacity-25 hover:opacity-100 cursor-pointer slide-left"
         src="https://logos-download.com/wp-content/uploads/2022/01/Attentive_Logo.png"
         alt="attentive"
       />
     </div>
 
     <div class="mt-16 p-10 max-w-[1040px] mx-auto">
-
       <div class="flex flex-col justify-center items-center gap-6">
         <div
-          class="p-2 bg-gray-200 text-blue-700 text-xs font-semibold rounded-full"
+          class="p-2 bg-gray-200 text-blue-700 text-xs font-semibold rounded-full slide-top"
         >
-          Featured
+          Destacado
         </div>
-        <h1 class="text-3xl text-center">
-          Reasons why you should choose a <b class="text-blue-700">Chatbox</b>
+        <h1 class="text-3xl text-center slide-top">
+          Razones por las que deberías elegir <b class="text-blue-700">Chatbox</b>
         </h1>
-        <p class="w-full md:w-[50%] text-sm/8 text-gray-400 text-center">
-          Chatbox has several features that make the reason why you choose chatbox
+        <p class="w-full md:w-[50%] text-sm/8 text-gray-400 text-center slide-bottom">
+          Chatbox tiene varias características que hacen que sea la razón por la que eliges Chatbox.
         </p>
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-2">
- 
         <div
-          class="p-6 bg-gradient-to-tr from-blue-700 to-blue-500 flex flex-col justify-center items-center gap-4 rounded-2xl shadow-lg"
+          class="p-6 bg-gradient-to-tr from-blue-700 to-blue-500 flex flex-col justify-center items-center gap-4 rounded-2xl shadow-lg slide-left"
         >
           <div class="p-2 bg-white rounded-[50%]">
             <svg
@@ -166,14 +251,14 @@
               />
             </svg>
           </div>
-          <h3 class="text-white text-xl font-semibold">Easy to use</h3>
+          <h3 class="text-white text-xl font-semibold">Fácil de usar</h3>
           <p class="text-white text-base/8 text-center">
-            Easy to use for anyone, and simple
+            Fácil de usar para cualquiera, y simple.
           </p>
         </div>
 
         <div
-          class="p-6 bg-gradient-to-tr from-gray-50 to-gray-100 border border-gray-200 flex flex-col justify-center items-center gap-4 rounded-2xl shadow-lg"
+          class="p-6 bg-gradient-to-tr from-gray-50 to-gray-100 border border-gray-200 flex flex-col justify-center items-center gap-4 rounded-2xl shadow-lg slide-top"
         >
           <div class="p-2 bg-white rounded-[50%]">
             <svg
@@ -186,14 +271,14 @@
               />
             </svg>
           </div>
-          <h3 class="text-black text-xl font-semibold">Real Time</h3>
+          <h3 class="text-black text-xl font-semibold">Tiempo Real</h3>
           <p class="text-gray-500 text-base/8 text-center">
-            Connect with customers in real time.
+            Conéctate con los clientes en tiempo real.
           </p>
         </div>
 
         <div
-          class="p-6 bg-gradient-to-tr from-blue-700 to-blue-500 flex flex-col justify-center items-center gap-4 rounded-2xl shadow-lg"
+          class="p-6 bg-gradient-to-tr from-blue-700 to-blue-500 flex flex-col justify-center items-center gap-4 rounded-2xl shadow-lg slide-right"
         >
           <div class="p-2 bg-white rounded-[50%]">
             <svg
@@ -206,9 +291,9 @@
               />
             </svg>
           </div>
-          <h3 class="text-white text-xl font-semibold">Safety & Private</h3>
+          <h3 class="text-white text-xl font-semibold">Seguridad y Privacidad</h3>
           <p class="text-white text-base/8 text-center">
-            Enjoy your confort and safety when Communicate.
+            Disfruta de tu comodidad y seguridad al comunicarte.
           </p>
         </div>
       </div>
@@ -216,57 +301,53 @@
 
     <div class="mt-16 p-10 max-w-[1040px] mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-6">
-
         <div class="flex flex-col items-center md:items-start gap-6">
-          <h1 class="text-3xl/11 text-center md:text-left">
-            Communicate more efficiently by using
+          <h1 class="text-3xl/11 text-center md:text-left slide-left">
+            Comunícate de manera más eficiente usando
             <b class="text-blue-700">Chatbox</b>
           </h1>
-          <p class="text-sm/8 text-gray-400 text-center md:text-left">
-            Send messages easily using only mobile or desktop applications, and
-            with a myriad of features that can make your experience different
-            from other applications.
+          <p class="text-sm/8 text-gray-400 text-center md:text-left slide-right">
+            Envía mensajes fácilmente usando solo aplicaciones móviles o de escritorio, y
+            con una gran cantidad de características que pueden hacer que tu experiencia sea diferente
+            de otras aplicaciones.
           </p>
-          <div class="flex gap-7">
+          <div class="flex gap-7 slide-bottom">
             <div class="flex flex-col gap-2">
               <h3 class="font-semibold text-3xl">1M+</h3>
-              <p class="text-sm text-gray-400">Users</p>
+              <p class="text-sm text-gray-400">Usuarios</p>
             </div>
             <div class="flex flex-col gap-2">
               <h3 class="font-semibold text-3xl">2M+</h3>
-              <p class="text-sm text-gray-400">Downloads</p>
+              <p class="text-sm text-gray-400">Descargas</p>
             </div>
             <div class="flex flex-col gap-2">
               <h3 class="font-semibold text-3xl">2+</h3>
-              <p class="text-sm text-gray-400">Years</p>
+              <p class="text-sm text-gray-400">Años</p>
             </div>
           </div>
         </div>
 
-  
-        <img class="w-full md:w-[50%] rounded-2xl" src="./img/pantalla2.png" />
+        <img class="w-full md:w-[50%] rounded-2xl slide-right" src="./img/pantalla2.png" />
       </div>
     </div>
 
     <div class="mt-16 p-10 max-w-[1040px] mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-6">
-
-        <img class="w-full md:w-[50%] rounded-2xl" src="./img/pantalla3.png" />
-
+        <img class="w-full md:w-[50%] rounded-2xl slide-left" src="./img/pantalla3.png" />
 
         <div class="flex flex-col items-center md:items-start gap-6">
-          <h1 class="text-3xl/11 text-center md:text-left">
-            Send messages in
-            <b class="text-blue-700">Real Time</b>, without any delay between us
+          <h1 class="text-3xl/11 text-center md:text-left slide-right">
+            Envía mensajes en
+            <b class="text-blue-700">Tiempo Real</b>, sin demoras entre nosotros.
           </h1>
-          <p class="text-sm/8 text-gray-400 text-center md:text-left">
-            Send messages easily and also without any delay between us. Make the
-            convenience of sending messages better and more fun.
+          <p class="text-sm/8 text-gray-400 text-center md:text-left slide-bottom">
+            Envía mensajes fácilmente y también sin demoras entre nosotros. Haz que la
+            comodidad de enviar mensajes sea mejor y más divertida.
           </p>
           <button
-            class="bg-blue-700 w-fit text-white text-sm font-semibold px-8 py-4 rounded-full cursor-pointer"
+            class="bg-blue-700 w-fit text-white text-sm font-semibold px-8 py-4 rounded-full cursor-pointer slide-bottom"
           >
-            Learn More
+            Aprende Más
           </button>
         </div>
       </div>
@@ -276,19 +357,17 @@
       class="relative mt-16 p-10 bg-gradient-to-tr from-blue-700 to-blue-500"
     >
       <div class="max-w-[1040px] mx-auto">
-
-        <img class="rounded-xl" src="./img/pantalla1.png" />
+        <img class="rounded-xl slide-bottom" src="./img/pantalla1.png" />
       </div>
       <div class="absolute top-[45%] left-0 w-full bg-gray-950 flex flex-col">
-
         <div class="p-10 max-w-[1040px] mx-auto">
           <div class="flex flex-col md:flex-row justify-between gap-10">
-            <h1 class="text-white text-4xl/14 font-semibold text-center md:text-left">
-              Want to stay Connected?
+            <h1 class="text-white text-4xl/14 font-semibold text-center md:text-left slide-left">
+              ¿Quieres mantenerte conectado?
             </h1>
             <div class="flex gap-2 items-center justify-center md:justify-start">
               <button
-                class="min-w-fit flex gap-1 items-center bg-blue-700 text-white text-xs font-semibold px-8 py-4 rounded-full cursor-pointer"
+                class="min-w-fit flex gap-1 items-center bg-blue-700 text-white text-xs font-semibold px-8 py-4 rounded-full cursor-pointer slide-right"
               >
                 <svg
                   class="w-5 h-5 fill-white"
@@ -299,10 +378,10 @@
                     d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
                   />
                 </svg>
-                <span class="ml-2">Download Now</span>
+                <span class="ml-2">Descargar Ahora</span>
               </button>
               <button
-                class="min-w-fit flex gap-1 items-center text-white text-xs font-semibold border border-white px-8 py-4 rounded-full cursor-pointer"
+                class="min-w-fit flex gap-1 items-center text-white text-xs font-semibold border border-white px-8 py-4 rounded-full cursor-pointer slide-right"
               >
                 <svg
                   class="w-5 h-5 fill-white"
@@ -313,7 +392,7 @@
                     d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
                   />
                 </svg>
-                <span class="ml-2">Download Now</span>
+                <span class="ml-2">Descargar Ahora</span>
               </button>
             </div>
           </div>
@@ -323,8 +402,7 @@
 
         <div class="p-10 max-w-[1040px] mx-auto flex flex-col md:flex-row justify-between gap-10">
           <div class="flex flex-col gap-6">
-    
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 slide-left">
               <svg
                 class="w-8 h-8 fill-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -337,40 +415,74 @@
               <h1 class="text-white text-xl font-semibold">Chatbox</h1>
             </div>
 
-            <p class="w-[70%] text-gray-500 text-xs/7">
-              Random used to send messages with a myriad of features. by
-              prioritizing the user experience.
+            <p class="w-[70%] text-gray-500 text-xs/7 slide-right">
+              Plataforma utilizada para enviar mensajes con una gran cantidad de características, priorizando la experiencia del usuario.
             </p>
 
-            <p class="text-white text-xs">mail@chatbox.com</p>
+            <p class="text-white text-xs slide-bottom">mail@chatbox.com</p>
           </div>
 
           <div class="flex flex-col md:flex-row justify-between gap-20">
-            <ul class="flex flex-col gap-6 text-sm">
-              <li class="text-white">Home</li>
-              <li class="text-gray-400"><a href="#">Abut Us</a></li>
-              <li class="text-gray-400"><a href="#">Download</a></li>
-              <li class="text-gray-400"><a href="#">Community</a></li>
+            <ul class="flex flex-col gap-6 text-sm slide-left">
+              <li class="text-white">Inicio</li>
+              <li class="text-gray-400"><a href="#">Sobre Nosotros</a></li>
+              <li class="text-gray-400"><a href="#">Descargar</a></li>
+              <li class="text-gray-400"><a href="#">Comunidad</a></li>
             </ul>
-            <ul class="flex flex-col gap-6 text-sm">
-              <li class="text-white">Features</li>
-              <li class="text-gray-400"><a href="#">Get Started</a></li>
-              <li class="text-gray-400"><a href="#">Privacy Policy</a></li>
+            <ul class="flex flex-col gap-6 text-sm slide-top">
+              <li class="text-white">Características</li>
+              <li class="text-gray-400"><a href="#">Comenzar</a></li>
+              <li class="text-gray-400"><a href="#">Política de Privacidad</a></li>
             </ul>
-            <ul class="flex flex-col gap-6 text-sm">
-              <li class="text-white">Social Media</li>
+            <ul class="flex flex-col gap-6 text-sm slide-right">
+              <li class="text-white">Redes Sociales</li>
               <li class="text-gray-400"><a href="#">Instagram</a></li>
               <li class="text-gray-400"><a href="#">LinkedIn</a></li>
             </ul>
           </div>
         </div>
-
         <hr class="border-gray-500 mx-10" />
-
-        <p class="py-10 text-white text-sm text-center">
-          © 2023 Chatbox. All rights reserved.
+        <p class="py-10 text-white text-sm text-center slide-bottom">
+          © 2023 Chatbox. Todos los derechos reservados.
         </p>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedElements = document.querySelectorAll(".slide-left, .slide-right, .slide-top, .slide-bottom");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Añade la clase de animación cuando el elemento entra en la vista
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translate(0, 0)";
+              } else {
+                // Restablece la animación cuando el elemento sale de la vista
+                entry.target.style.opacity = 0;
+                if (entry.target.classList.contains("slide-left")) {
+                  entry.target.style.transform = "translateX(-100%)";
+                } else if (entry.target.classList.contains("slide-right")) {
+                  entry.target.style.transform = "translateX(100%)";
+                } else if (entry.target.classList.contains("slide-top")) {
+                  entry.target.style.transform = "translateY(-100%)";
+                } else if (entry.target.classList.contains("slide-bottom")) {
+                  entry.target.style.transform = "translateY(100%)";
+                }
+              }
+            });
+          },
+          {
+            threshold: 0.1, 
+          }
+        );
+
+        animatedElements.forEach((element) => {
+          observer.observe(element); 
+        });
+      });
+    </script>
   </body>
 </html>
